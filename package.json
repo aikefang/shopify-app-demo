@@ -1,0 +1,28 @@
+{
+  "name": "node-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development supervisor app.js",
+    "prod": "pm2 start pm2.config.js --env production",
+    "start": "NODE_ENV=production supervisor app.js",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shopify/koa-shopify-auth": "^4.1.4",
+    "@shopify/koa-shopify-graphql-proxy": "^6.0.2",
+    "dotenv": "^10.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
